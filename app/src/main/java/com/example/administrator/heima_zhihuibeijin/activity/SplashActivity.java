@@ -11,7 +11,7 @@ import android.view.animation.ScaleAnimation;
 import android.widget.RelativeLayout;
 
 import com.example.administrator.heima_zhihuibeijin.R;
-import com.example.administrator.heima_zhihuibeijin.ulits.PrefUlits;
+import com.example.administrator.heima_zhihuibeijin.utils.PrefUtils;
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -58,7 +58,7 @@ public class SplashActivity extends AppCompatActivity {
 
             @Override
             public void onAnimationEnd(Animation animation) {
-                boolean isFirstEnter = PrefUlits.getBoolean(getApplicationContext(), "IS_FIRST_ENTER", true);
+                boolean isFirstEnter = PrefUtils.getBoolean(getApplicationContext(), "IS_FIRST_ENTER", true);
                 Intent intent;
                 if (isFirstEnter) {
                     intent = new Intent(getApplicationContext(), GuideActivity.class);

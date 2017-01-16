@@ -16,14 +16,31 @@
         android:layout_alignParentBottom="true"
         android:layout_centerInParent="true"
         android:layout_marginBottom="77dp"
-        android:text="欢迎使用" />
+        android:background="@drawable/selector_btn_guide"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:visibility="invisible"
+        android:textSize="25dp"
+        android:text="欢迎使用"
+        android:textColor="@drawable/selector_text_guide" />
 
-    <LinearLayout
-        android:id="@+id/ll_container"
+    <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerInParent="true"
-        android:layout_marginBottom="40dp"
-        android:orientation="horizontal"></LinearLayout>
+        android:layout_marginBottom="40dp">
+
+        <LinearLayout
+            android:id="@+id/ll_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"></LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_red_point"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_red_point" />
+    </RelativeLayout>
 </RelativeLayout>

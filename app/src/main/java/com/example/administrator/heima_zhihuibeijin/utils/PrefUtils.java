@@ -1,4 +1,4 @@
-package com.example.administrator.heima_zhihuibeijin.ulits;
+package com.example.administrator.heima_zhihuibeijin.utils;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -7,7 +7,7 @@ import android.content.SharedPreferences;
  * Created by Administrator on 2017/1/15.
  */
 
-public class PrefUlits {
+public class PrefUtils {
 
     public static boolean getBoolean(Context ctx, String name, boolean defValue) {
         SharedPreferences sp = ctx.getSharedPreferences("config", Context.MODE_PRIVATE);
