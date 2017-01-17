@@ -7,7 +7,6 @@ import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.ViewParent;
 import android.view.ViewTreeObserver;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -15,7 +14,8 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
 import com.example.administrator.heima_zhihuibeijin.R;
-import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
+import com.example.administrator.heima_zhihuibeijin.utils.ConstantsValue;
+import com.example.administrator.heima_zhihuibeijin.utils.PrefUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -114,7 +114,9 @@ public class GuideActivity extends Activity {
         bt_enter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                PrefUtils.putBoolean(getApplicationContext(), ConstantsValue.IS_FIRST_ENTER,false);
                 startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                finish();
             }
         });
     }

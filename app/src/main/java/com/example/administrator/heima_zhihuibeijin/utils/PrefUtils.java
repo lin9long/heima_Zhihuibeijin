@@ -16,7 +16,7 @@ public class PrefUtils {
 
     public static void putBoolean(Context ctx, String name, boolean value) {
         SharedPreferences sp = ctx.getSharedPreferences("config", Context.MODE_PRIVATE);
-        sp.edit().putBoolean(name, value);
+        sp.edit().putBoolean(name, value).commit();
     }
 
     public static String getString(Context ctx, String name, String defValue) {
@@ -26,7 +26,7 @@ public class PrefUtils {
 
     public static void putString(Context ctx, String name, String value) {
         SharedPreferences sp = ctx.getSharedPreferences("config", Context.MODE_PRIVATE);
-        sp.edit().putString(name, value);
+        sp.edit().putString(name, value).commit();
     }
 
     public static int getInt(Context ctx, String name, int defValue) {
@@ -36,6 +36,6 @@ public class PrefUtils {
 
     public static void putInt(Context ctx, String name, int value) {
         SharedPreferences sp = ctx.getSharedPreferences("config", Context.MODE_PRIVATE);
-        sp.edit().putInt(name, value);
+        sp.edit().putInt(name, value).commit();
     }
 }
