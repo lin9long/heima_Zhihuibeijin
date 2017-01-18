@@ -8,6 +8,8 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.administrator.heima_zhihuibeijin.R;
+import com.example.administrator.heima_zhihuibeijin.activity.MainActivity;
+import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 
 /**
  * 5个标签页的基类
@@ -33,7 +35,20 @@ public class BasePager {
         flContent = (FrameLayout) view.findViewById(R.id.fl_content);
         ibMenu = (ImageButton) view.findViewById(R.id.ib_menu);
         tvTitle = (TextView) view.findViewById(R.id.tv_title);
+        ibMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                toggle();
+            }
+        });
         return view;
+
+    }
+
+    private void toggle() {
+        MainActivity mainUi = (MainActivity) mActivity;
+        SlidingMenu slidingMenu = mainUi.getSlidingMenu();
+        slidingMenu.toggle();
     }
 
     public void initData() {

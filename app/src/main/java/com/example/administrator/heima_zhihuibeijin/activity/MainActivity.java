@@ -2,6 +2,7 @@ package com.example.administrator.heima_zhihuibeijin.activity;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 
@@ -15,8 +16,8 @@ import com.jeremyfeinstein.slidingmenu.lib.app.SlidingFragmentActivity;
  * Created by Administrator on 2017/1/15.
  */
 public class MainActivity extends SlidingFragmentActivity {
-    private String ADD_CONTENT = "add_content";
-    private String ADD_LEFT_MENU = "add_left_menu";
+    private static final String ADD_CONTENT = "add_content";
+    private static final String ADD_LEFT_MENU = "add_left_menu";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -39,4 +40,16 @@ public class MainActivity extends SlidingFragmentActivity {
         transaction.commit();
     }
 
+    //给子方法获取左边栏fragment
+    public LeftMenuFragment getLeftFragment() {
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        LeftMenuFragment leftMenuFragment = (LeftMenuFragment) fragmentManager.findFragmentByTag(ADD_LEFT_MENU);
+        return leftMenuFragment;
+    }
+    //给子方法获取主内容fragment
+    public ContentFragment getContentFragment() {
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        ContentFragment contentFragment = (ContentFragment) fragmentManager.findFragmentByTag(ADD_CONTENT);
+        return contentFragment;
+    }
 }
