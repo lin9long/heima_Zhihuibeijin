@@ -286,7 +286,8 @@ public class TabPageIndicator extends HorizontalScrollView implements PageIndica
 
 
     /**
-     * 为了滑动标签页不打开左侧抽屉，重写触摸事件传递机制，在子控件中设置不允许父级或以上控件响应触摸事件
+     * 为了滑动标签页不打开左侧抽屉，重写触摸事件传递机制，
+     * 在子控件中设置不允许父级或以上控件响应触摸事件
      *
      * @param ev
      * @return
