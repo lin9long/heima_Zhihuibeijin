@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.view.Window;
 
 import com.example.administrator.heima_zhihuibeijin.R;
 import com.example.administrator.heima_zhihuibeijin.fragment.ContentFragment;
@@ -22,6 +23,7 @@ public class MainActivity extends SlidingFragmentActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
         //添加侧边栏到布局内
         setBehindContentView(R.layout.sliding_leftmenu);
