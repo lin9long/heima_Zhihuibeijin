@@ -6,6 +6,8 @@
       <module fileurl="file://$PROJECT_DIR$/ViewPagerIndicatorLibrary/ViewPagerIndicatorLibrary.iml" filepath="$PROJECT_DIR$/ViewPagerIndicatorLibrary/ViewPagerIndicatorLibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/heima_Zhihuibeijin.iml" filepath="$PROJECT_DIR$/heima_Zhihuibeijin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SlidingMenu/slidingmenu.iml" filepath="$PROJECT_DIR$/SlidingMenu/slidingmenu.iml" />
+      <module fileurl="file://$PROJECT_DIR$/viewpagerindicator/viewpagerindicator.iml" filepath="$PROJECT_DIR$/viewpagerindicator/viewpagerindicator.iml" />
       <module fileurl="file://$PROJECT_DIR$/xutilsLibrary/xutilsLibrary.iml" filepath="$PROJECT_DIR$/xutilsLibrary/xutilsLibrary.iml" />
     </modules>
   </component>
